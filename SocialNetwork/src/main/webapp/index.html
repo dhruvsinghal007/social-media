@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Social Network</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="socialNetwork.js"></script>
+    <style>
+		table {
+		  font-family: arial, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+		
+		td, th {
+		  border: 1px solid #dddddd;
+		  text-align: left;
+		  padding: 8px;
+		}
+		
+		tr:nth-child(even) {
+		  background-color: #dddddd;
+		}
+	</style>
+</head>
+
+<body>
+    <h3>Users List By Page</h3>
+    <input type="number" id="pageNumber" placeholder="Page Number" />
+    <input type="number" id="pageSize" placeholder="Page Size" />
+    <button onclick="showUsersByPage()">Show</button>
+    <div id="usersPaginated"></div>
+
+    <hr>
+
+    <h3>Users Friends</h3>
+    <input type="text" id="userId1" placeholder="User Id" />
+    <button onclick="showFriendsOfUser()">Show</button>
+    <div id="usersFriends"></div>
+
+    <hr>
+
+    <h3>Users Friends Of Friends</h3>
+    <input type="text" id="userId2" placeholder="User Id" />
+    <button onclick="showFriendsOfFriendsOfUser()">Show</button>
+    <div id="usersFriendsOfFriends"></div>
+</body>
+
+</html>
